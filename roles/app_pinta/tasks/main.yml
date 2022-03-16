@@ -1,16 +1,16 @@
 ---
-- name: "Application / X_TASK_ROLE_NAME_X / Initialize"
+- name: "Application / Pinta / Initialize"
   ansible.builtin.include_tasks:
     file: "app_pinta_initialize.yml"
 
-- name: "Application / X_TASK_ROLE_NAME_X / Deploy"
+- name: "Application / Pinta / Deploy"
   ansible.builtin.include_tasks:
     file: "app_pinta_deploy.yml"
   when:
     - app_pinta['deploy'] is defined
     - app_pinta['deploy']
 
-- name: "Application / X_TASK_ROLE_NAME_X / Finalize"
+- name: "Application / Pinta / Finalize"
   ansible.builtin.include_tasks:
     file: "app_pinta_finalize.yml"
 ...

@@ -1,4 +1,12 @@
 ---
+app_tilix_base:
+  access: "{{ app_tilix_base_common['access'] }}"
+  templates: "{{ app_tilix_base_common['templates'] }}"
+  etc: "{{ app_tilix_base_common['etc'] }}"
+  files: "{{ app_tilix_base_common['files'] }}"
+  run: "{{ app_tilix_base_common['run'] }}"
+  paths: "{{ app_tilix_base_common['paths'] }}"
+
 app_tilix_profiles:
   distro:
     latest:
