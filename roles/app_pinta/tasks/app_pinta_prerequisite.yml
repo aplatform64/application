@@ -1,5 +1,5 @@
 ---
-- name: "Application / X_TASK_ROLE_NAME_X / Prerequisite / Prepare package managers"
+- name: "Application / Pinta / Prerequisite / Prepare package managers"
   vars:
     sys_repository:
       prepare: true
@@ -19,14 +19,14 @@
   ansible.builtin.include_role:
     name: "serdigital64.system.sys_repository"
 
-- name: "Application / X_TASK_ROLE_NAME_X / Prerequisite / Prepare archive manager"
+- name: "Application / Pinta / Prerequisite / Prepare archive manager"
   vars:
     bkp_archive:
       deploy: true
   ansible.builtin.include_role:
     name: "serdigital64.backup.bkp_archive"
 
-- name: "Application / X_TASK_ROLE_NAME_X / Prerequisite / Prepare package installer"
+- name: "Application / Pinta / Prerequisite / Prepare package installer"
   vars:
     sys_package:
       prepare: true
