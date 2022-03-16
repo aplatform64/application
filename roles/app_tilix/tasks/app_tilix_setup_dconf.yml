@@ -1,0 +1,24 @@
+---
+- name: "Application / Tilix / Setup / DConf / Create user configuration"
+  become: true
+  ansible.builtin.template:
+    backup: false
+    follow: false
+    force: true
+    unsafe_writes: false
+    owner: "{{ app_tilix_base['access']['user']['owner'] }}"
+    group: "{{ app_tilix_base['access']['group']['owner'] }}"
+    mode: "{{ app_tilix_base['access']['mode']['file'] }}"
+    src: "{{ app_tilix_dconf['tilix'] + '.toml.j2' }}"
+    dest: "{{ app_tilix_base['paths']['var'] + '/' + app_tilix_dconf['tilix'] }}"
+
+- name: "Application / Tilix / Setup / DConf / Deploy user configuration to DConf"
+  vars:
+    sys_dconf:
+      provision: true
+    sys_dconf_db_local:
+      - source: "{{ app_tilix_base['paths']['var'] + '/' + app_tilix_dconf['tilix'] }}"
+        name: "{{ 'app_tilix-' + app_tilix_dconf['tilix'] }}"
+  ansible.builtin.include_role:
+    name: "serdigital64.system.sys_dconf"
+...

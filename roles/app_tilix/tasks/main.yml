@@ -3,12 +3,26 @@
   ansible.builtin.include_tasks:
     file: "app_tilix_initialize.yml"
 
+- name: "Application / Tilix / Prepare"
+  ansible.builtin.include_tasks:
+    file: "app_tilix_prepare.yml"
+  when:
+    - app_tilix['prepare'] is defined
+    - app_tilix['prepare']
+
 - name: "Application / Tilix / Deploy"
   ansible.builtin.include_tasks:
     file: "app_tilix_deploy.yml"
   when:
-    - "'deploy' in app_tilix"
+    - app_tilix['deploy'] is defined
     - app_tilix['deploy']
+
+- name: "Application / Tilix / Setup"
+  ansible.builtin.include_tasks:
+    file: "app_tilix_setup.yml"
+  when:
+    - app_tilix['setup'] is defined
+    - app_tilix['setup']
 
 - name: "Application / Tilix / Finalize"
   ansible.builtin.include_tasks:

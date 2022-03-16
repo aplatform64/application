@@ -1,0 +1,10 @@
+---
+- name: "Application / Tilix / Setup / DConf"
+  ansible.builtin.include_tasks:
+    file: "app_tilix_setup_dconf.yml"
+  when:
+    - app_tilix_dconf is defined
+    - app_tilix_dconf['tilix'] is defined
+    - app_tilix_dconf['tilix'] | length > 0
+    - app_tilix_dconf['tilix'] in app_tilix_catalog_dconf_catalog['tilix']['themes']
+...
