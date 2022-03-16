@@ -1,5 +1,5 @@
 ---
-- name: "Application / X_TASK_ROLE_NAME_X / Deploy / Package / Provision application"
+- name: "Application / Pinta / Deploy / Package / Provision application"
   vars:
     sys_package:
       provision: true

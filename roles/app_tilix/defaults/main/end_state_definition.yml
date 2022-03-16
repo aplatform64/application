@@ -4,4 +4,7 @@ app_tilix_application:
   type: "distro"
   version: "latest"
   installed: true
+
+app_tilix_dconf:
+  tilix: "p10k_v1"
 ...

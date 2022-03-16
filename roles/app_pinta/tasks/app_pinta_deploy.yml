@@ -1,5 +1,5 @@
 ---
-- name: "Application / X_TASK_ROLE_NAME_X / Deploy / Check required parameters"
+- name: "Application / Pinta / Deploy / Check required parameters"
   ansible.builtin.assert:
     fail_msg: "Required end-state parameters are missing ({{ app_pinta_application | default('app_pinta_application') }})"
     quiet: true
@@ -11,7 +11,7 @@
       - app_pinta_application['version'] is defined
       - app_pinta_application['installed'] is defined
 
-- name: "Application / X_TASK_ROLE_NAME_X / Deploy / Package"
+- name: "Application / Pinta / Deploy / Package"
   ansible.builtin.include_tasks:
     file: "app_pinta_deploy_package.yml"
   when:
