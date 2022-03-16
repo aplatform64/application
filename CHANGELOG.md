@@ -7,7 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0]
+
+### Added
+
+- app_keepassxc: overwrite user setup flag
+
 ## [1.3.3]
 
-[Unreleased]: https://github.com/serdigital64/aplatform64/compare/1.3.3...HEAD
+[Unreleased]: https://github.com/serdigital64/aplatform64/compare/1.4.0...HEAD
+[1.4.0]: https://github.com/serdigital64/aplatform64/compare/1.3.3...1.4.0
 [1.3.3]: https://github.com/serdigital64/aplatform64/releases/tag/1.3.3

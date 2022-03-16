@@ -18,9 +18,9 @@
     app_keepassxc___setup_user['home'] + '/' + app_keepassxc_base['etc']['keepassxc_ini'] }})"
   become: true
   ansible.builtin.template:
-    backup: false
+    backup: "{{ app_keepassxc_actions['setup']['overwrite'] | default(false) }}"
     follow: false
-    force: false
+    force: "{{ app_keepassxc_actions['setup']['overwrite'] | default(false) }}"
     unsafe_writes: false
     owner: "{{ app_keepassxc___setup_user['user'] }}"
     group: "{{ app_keepassxc___setup_user['user'] }}"
