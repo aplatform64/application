@@ -10,6 +10,8 @@ app_keepassxc_platforms:
 app_keepassxc_os_family: "
   {%- if
       ( ansible_distribution == 'CentOS' ) or
+      ( ansible_distribution == 'RedHat' ) or
+      ( ansible_distribution == 'AlmaLinux' ) or
       ( ansible_distribution == 'OracleLinux' )
   -%}
     {{ 'RedHat' }}
@@ -23,7 +25,7 @@ app_keepassxc_os_family: "
   -%}
     {{ 'Ubuntu' }}
   {%- else -%}
-    {{ 'Linux' }}
+    {{ 'NotSupported' }}
   {%- endif -%}
   "
 
