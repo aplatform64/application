@@ -10,8 +10,8 @@
     recurse: false
     state: "directory"
     path: "{{ app_keepassxc___setup_user['home'] + '/' + app_keepassxc_base['paths']['etc_keepassxc'] }}"
-    owner: "{{ app_keepassxc___setup_user['user'] }}"
-    group: "{{ app_keepassxc___setup_user['user'] }}"
+    owner: "{{ app_keepassxc___setup_user['name'] }}"
+    group: "{{ app_keepassxc___setup_user['name'] }}"
     mode: "{{ app_keepassxc_base['access']['mode']['dir'] }}"
 
 - name: "Application / KeePassXC / Setup / User / Create default configuration ({{
@@ -22,8 +22,8 @@
     follow: false
     force: "{{ app_keepassxc_actions['setup']['overwrite'] | default(false) }}"
     unsafe_writes: false
-    owner: "{{ app_keepassxc___setup_user['user'] }}"
-    group: "{{ app_keepassxc___setup_user['user'] }}"
+    owner: "{{ app_keepassxc___setup_user['name'] }}"
+    group: "{{ app_keepassxc___setup_user['name'] }}"
     mode: "{{ app_keepassxc_base['access']['mode']['file'] }}"
     src: "{{ app_keepassxc_base['templates']['keepassxc_ini'] }}"
     dest: "{{ app_keepassxc___setup_user['home'] + '/' + app_keepassxc_base['etc']['keepassxc_ini'] }}"
