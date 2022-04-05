@@ -1,6 +1,8 @@
 ---
 app_vscode_platforms:
   - "CentOS8"
+  - "RedHat8"
+  - "AlmaLinux8"
   - "OracleLinux8"
   - "Ubuntu20"
   - "Ubuntu21"
@@ -12,6 +14,8 @@ app_vscode_platforms:
 app_vscode_os_family: "
   {%- if
       ( ansible_distribution == 'CentOS' ) or
+      ( ansible_distribution == 'RedHat' ) or
+      ( ansible_distribution == 'AlmaLinux' ) or
       ( ansible_distribution == 'OracleLinux' ) or
       ( ansible_distribution == 'Fedora' )
   -%}
@@ -22,7 +26,7 @@ app_vscode_os_family: "
   -%}
     {{ 'Ubuntu' }}
   {%- else -%}
-    {{ 'Linux' }}
+    {{ 'NotSupported' }}
   {%- endif -%}
   "
 
