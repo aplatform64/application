@@ -4,9 +4,11 @@ app_freecad_platforms:
   - "CentOS8"
   - "RedHat8"
   - "AlmaLinux8"
+  - "Rocky8"
   - "OracleLinux8"
   - "Ubuntu20"
   - "Ubuntu21"
+  - "Ubuntu22"
   - "Fedora33"
   - "Fedora35"
   - "Debian10"
@@ -18,6 +20,7 @@ app_freecad_os_family: "
       ( ansible_distribution == 'CentOS' ) or
       ( ansible_distribution == 'RedHat' ) or
       ( ansible_distribution == 'AlmaLinux' ) or
+      ( ansible_distribution == 'Rocky' ) or
       ( ansible_distribution == 'OracleLinux' ) or
       ( ansible_distribution == 'Fedora' )
   -%}

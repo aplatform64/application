@@ -3,9 +3,11 @@ app_vscode_platforms:
   - "CentOS8"
   - "RedHat8"
   - "AlmaLinux8"
+  - "Rocky8"
   - "OracleLinux8"
   - "Ubuntu20"
   - "Ubuntu21"
+  - "Ubuntu22"
   - "Fedora33"
   - "Fedora35"
   - "Debian10"
@@ -16,6 +18,7 @@ app_vscode_os_family: "
       ( ansible_distribution == 'CentOS' ) or
       ( ansible_distribution == 'RedHat' ) or
       ( ansible_distribution == 'AlmaLinux' ) or
+      ( ansible_distribution == 'Rocky' ) or
       ( ansible_distribution == 'OracleLinux' ) or
       ( ansible_distribution == 'Fedora' )
   -%}
@@ -238,9 +241,13 @@ app_vscode_catalog:
     - "ms-vscode-remote.remote-containers"
     - "ms-vscode-remote.remote-ssh"
     - "ms-vscode-remote.remote-wsl"
-  tools:
+  git:
     - "github.vscode-pull-request-github"
     - "codezombiech.gitignore"
+    - "donjayamanne.githistory"
+    - "eamodio.gitlens"
+    - "gitlab.gitlab-workflow"
+  tools:
     - "techer.open-in-browser"
     - "oderwat.indent-rainbow"
     - "jannisx11.batch-rename-extension"
@@ -258,8 +265,6 @@ app_vscode_catalog:
     - "spmeesseman.vscode-taskexplorer"
     - "wayou.vscode-todo-highlight"
     - "Tyriar.sort-lines"
-    - "donjayamanne.githistory"
-    - "eamodio.gitlens"
     - "sleistner.vscode-fileutils"
     - "aaron-bond.better-comments"
     - "alefragnani.project-manager"
@@ -308,8 +313,8 @@ app_vscode_catalog:
     - "Equinusocio.vsc-material-theme"
     - "felipe-mendes.slack-theme"
     - "fisheva.eva-theme"
-    - "GitHub.github-vscode-theme"
     - "jprestidge.theme-material-theme"
+    - "GitHub.github-vscode-theme"
     - "karyfoundation.theme-karyfoundation-themes"
     - "mariorodeghiero.vue-theme"
     - "monokai.theme-monokai-pro-vscode"

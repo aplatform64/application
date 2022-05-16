@@ -2,6 +2,7 @@
 app_keepassxc_platforms:
   - "Ubuntu20"
   - "Ubuntu21"
+  - "Ubuntu22"
   - "Fedora33"
   - "Fedora35"
   - "Debian10"
@@ -12,6 +13,7 @@ app_keepassxc_os_family: "
       ( ansible_distribution == 'CentOS' ) or
       ( ansible_distribution == 'RedHat' ) or
       ( ansible_distribution == 'AlmaLinux' ) or
+      ( ansible_distribution == 'Rocky' ) or
       ( ansible_distribution == 'OracleLinux' )
   -%}
     {{ 'RedHat' }}
