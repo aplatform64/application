@@ -2,6 +2,7 @@
 app_tilix_platforms:
   - "Ubuntu20"
   - "Ubuntu21"
+  - "Ubuntu22"
   - "Fedora33"
   - "Fedora35"
   - "Debian10"
