@@ -9,7 +9,10 @@ galaxy_info:
   platforms:
     - name: "GenericLinux"
       versions:
-        - "any"
+        - "all"
+    - name: "GenericUNIX"
+      versions:
+        - "all"
   galaxy_tags:
     - "gimp"
 dependencies: []
