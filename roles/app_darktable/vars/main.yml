@@ -11,6 +11,7 @@ app_darktable_platforms:
   - "Ubuntu22"
   - "Fedora33"
   - "Fedora35"
+  - "Fedora36"
   - "Debian10"
   - "Debian11"
 
