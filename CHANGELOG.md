@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0]
+
+### Changed
+
+- Replaced OSS code license
+
 ## [1.9.0]
 
 ### Added
@@ -49,7 +55,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.3.3]
 
-[Unreleased]: https://github.com/serdigital64/aplatform64/compare/1.8.0...HEAD
+[Unreleased]: https://github.com/serdigital64/aplatform64/compare/2.0.0...HEAD
+[2.0.0]: https://github.com/serdigital64/aplatform64/compare/1.8.0...2.0.0
 [1.8.0]: https://github.com/serdigital64/aplatform64/compare/1.7.0...1.8.0
 [1.7.0]: https://github.com/serdigital64/aplatform64/compare/1.6.0...1.7.0
 [1.6.0]: https://github.com/serdigital64/aplatform64/compare/1.5.0...1.6.0
