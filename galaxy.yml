@@ -7,7 +7,7 @@ authors:
   - "SerDigital64 <https://github.com/serdigital64>"
 description: "Ansible Roles for automating office applications provisioning"
 license:
-  - "GPL-3.0-or-later"
+  - "Apache-2.0"
 tags:
   - "application"
   - "productivity"
