@@ -14,7 +14,7 @@ app_vscode_platforms:
   - "Debian10"
   - "Debian11"
 
-app_vscode_os_family: "
+app_vscode_os_family: |
   {%- if
       ( ansible_distribution == 'CentOS' ) or
       ( ansible_distribution == 'RedHat' ) or
@@ -32,7 +32,6 @@ app_vscode_os_family: "
   {%- else -%}
     {{ 'NotSupported' }}
   {%- endif -%}
-  "
 
 app_vscode_base:
   access:

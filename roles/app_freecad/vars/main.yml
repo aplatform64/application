@@ -16,7 +16,7 @@ app_freecad_platforms:
   - "Debian11"
 
 # Group Linux Distributions by family
-app_freecad_os_family: "
+app_freecad_os_family: |
   {%- if
       ( ansible_distribution == 'CentOS' ) or
       ( ansible_distribution == 'RedHat' ) or
@@ -34,7 +34,6 @@ app_freecad_os_family: "
   {%- else -%}
     {{ 'NotSupported' }}
   {%- endif -%}
-  "
 
 # Multiplatform packages
 app_freecad_profiles_common:

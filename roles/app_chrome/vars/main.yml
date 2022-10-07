@@ -14,7 +14,7 @@ app_chrome_platforms:
   - "Debian10"
   - "Debian11"
 
-app_chrome_os_family: "
+app_chrome_os_family: |
   {%- if
       ( ansible_distribution == 'CentOS' ) or
       ( ansible_distribution == 'RedHat' ) or
@@ -32,6 +32,5 @@ app_chrome_os_family: "
   {%- else -%}
     {{ 'NotSupported' }}
   {%- endif -%}
-  "
 
 ...
