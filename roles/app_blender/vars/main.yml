@@ -6,6 +6,7 @@ app_blender_platforms:
   - "AlmaLinux8"
   - "Rocky8"
   - "OracleLinux8"
+  - "OracleLinux9"
   - "Ubuntu20"
   - "Ubuntu21"
   - "Ubuntu22"
@@ -16,7 +17,7 @@ app_blender_platforms:
   - "Debian11"
 
 # Group Linux Distributions by family
-app_blender_os_family: "
+app_blender_os_family: |
   {%- if
       ( ansible_distribution == 'CentOS' ) or
       ( ansible_distribution == 'RedHat' ) or
@@ -34,7 +35,6 @@ app_blender_os_family: "
   {%- else -%}
     {{ 'NotSupported' }}
   {%- endif -%}
-  "
 
 # Multiplatform packages
 app_blender_profiles_common:
