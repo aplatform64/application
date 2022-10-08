@@ -5,6 +5,7 @@ app_vscode_platforms:
   - "AlmaLinux8"
   - "Rocky8"
   - "OracleLinux8"
+  - "OracleLinux9"
   - "Ubuntu20"
   - "Ubuntu21"
   - "Ubuntu22"
@@ -14,7 +15,7 @@ app_vscode_platforms:
   - "Debian10"
   - "Debian11"
 
-app_vscode_os_family: "
+app_vscode_os_family: |
   {%- if
       ( ansible_distribution == 'CentOS' ) or
       ( ansible_distribution == 'RedHat' ) or
@@ -32,7 +33,6 @@ app_vscode_os_family: "
   {%- else -%}
     {{ 'NotSupported' }}
   {%- endif -%}
-  "
 
 app_vscode_base:
   access:
