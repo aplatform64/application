@@ -17,7 +17,7 @@ app_firefox_platforms:
   - "Debian11"
 
 # Group Linux Distributions by family
-app_firefox_os_family: |
+app_firefox_os_family: >-
   {%- if
       ( ansible_distribution == 'CentOS' ) or
       ( ansible_distribution == 'RedHat' ) or

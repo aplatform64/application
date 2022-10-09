@@ -9,7 +9,7 @@ app_tilix_platforms:
   - "Debian10"
   - "Debian11"
 
-app_tilix_os_family: |
+app_tilix_os_family: >-
   {%- if
       ( ansible_distribution == 'Fedora' )
   -%}
